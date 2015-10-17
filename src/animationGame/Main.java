@@ -9,6 +9,10 @@ public class Main {
 		Circle c1 = new Circle(88,9,8);
 		
 		System.out.println(s1);
+		System.out.println(t1);
+		System.out.println(c1);
+		System.out.println(t1.equals(s1));
+		System.out.println(c1.area());
 	}
 
 }
