@@ -16,4 +16,7 @@ public class Triangle extends GeometricObject {
 	public boolean equals(Object that){
 		return (that instanceof Triangle&& super.equals(that));
 	}
+	public double circumference(){
+		return width + 2*(Math.sqrt((width/2)*(width/2)+height*height));
+	}
 }
