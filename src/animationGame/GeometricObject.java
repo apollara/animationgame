@@ -1,10 +1,13 @@
 package animationGame;
 
+import java.awt.Color;
+
+
 public class GeometricObject {
 	
 	public Vertex pos;
 	public double height;
-	public double width;
+	public double width; 
 	
 	public double getWidht(){ return width;}
 	public double getHeight(){ return height;}
@@ -15,12 +18,18 @@ public class GeometricObject {
 	  this.width = width;
 	  this.height = height;
 	  
+	  
+	   
+	  
 	  if (width < 0) {this.width = - this.width;
 	  				   pos.x = pos.x - this.width;}
 	  if (height< 0) {this.height= - this.height;
 	  				   pos.y = pos.y - this.height;}
 	}
-
+	
+	public void setColor(Color c){
+		
+	}
 	public GeometricObject(double width, double height){
 		this(width,height,new Vertex (0,0));
 	}
