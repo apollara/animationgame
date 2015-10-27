@@ -8,15 +8,17 @@ public class GeometricObject {
 	public Vertex pos;
 	public double height;
 	public double width; 
+	public Color color;
 	
 	public double getWidht(){ return width;}
 	public double getHeight(){ return height;}
 	public Vertex getPos() { return pos;}
 	
-	public GeometricObject(double width, double height, Vertex pos)
+	public GeometricObject(double width, double height, Vertex pos,Color c)
 	{ this.pos = pos;
 	  this.width = width;
 	  this.height = height;
+	  this.color = c;
 	  
 	  
 	   
@@ -26,10 +28,12 @@ public class GeometricObject {
 	  if (height< 0) {this.height= - this.height;
 	  				   pos.y = pos.y - this.height;}
 	}
-	
-	public void setColor(Color c){
-		
+	public GeometricObject(double width, double height, Vertex pos)
+	{ this(width, height, pos, Color.black);
+	  
 	}
+	
+	
 	public GeometricObject(double width, double height){
 		this(width,height,new Vertex (0,0));
 	}
